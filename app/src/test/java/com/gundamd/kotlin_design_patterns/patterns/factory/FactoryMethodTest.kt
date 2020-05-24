@@ -1,33 +1,8 @@
 package com.gundamd.kotlin_design_patterns.patterns.factory
 
+import com.gundamd.kotlin_design_patterns.patterns.factory.data.*
 import org.junit.jupiter.api.Test
 
-
-data class Gundam(
-    val name: String? = "",
-    val material: ArmorMaterial? = null,
-    val propulsionSystem: PropulsionSystem? = null
-)
-
-
-interface ArmorMaterial {
-    var material: String
-}
-
-data class ArmorMaterialGundamBarbatos(override var material: String) : ArmorMaterial
-
-
-data class ArmorMaterialGundamUnicon(override var material: String) : ArmorMaterial
-
-interface PropulsionSystem {
-    var engine: String
-    var secretEngine: String
-}
-
-data class PropulsionSystemGundamBarbatos(override var engine: String, override var secretEngine: String) : PropulsionSystem
-
-
-data class PropulsionSystemGundamUnicon(override var engine: String, override var secretEngine: String) : PropulsionSystem
 
 abstract class GundamFactory {
 
@@ -60,7 +35,10 @@ class GundamUniconFactory : GundamFactory() {
 
     override fun createPropulsionSystem(): PropulsionSystem {
 
-        return PropulsionSystemGundamUnicon("Minovsky Ultracompact Fusion Reactor","Newtype Destroyer System")
+        return PropulsionSystemGundamUnicon(
+            "Minovsky Ultracompact Fusion Reactor",
+            "Newtype Destroyer System"
+        )
     }
 }
 
@@ -74,7 +52,10 @@ class GundamBarbatosFactory : GundamFactory() {
     }
 
     override fun createPropulsionSystem(): PropulsionSystem {
-        return PropulsionSystemGundamBarbatos("Ahab Thrusters Thermal Phase Transition Thrusters","")
+        return PropulsionSystemGundamBarbatos(
+            "Ahab Thrusters Thermal Phase Transition Thrusters",
+            ""
+        )
     }
 }
 
@@ -82,9 +63,19 @@ class GundamBarbatosFactory : GundamFactory() {
 class FactoryMethodTest {
 
     @Test
-    fun FactoryMethod() {
-        GundamUniconFactory().assemble()
-        GundamBarbatosFactory().assemble()
+     fun factoryMethod() {
+        val factory1 = initial("unicon")
+        factory1?.assemble()
+        val factory2 = initial("barbatos")
+        factory2?.assemble()
+    }
+
+  private  fun initial(type: String): GundamFactory? {
+      return when (type) {
+          "unicon" -> GundamUniconFactory()
+          "barbatos" -> GundamBarbatosFactory()
+          else -> null
+      }
 
     }
 }
