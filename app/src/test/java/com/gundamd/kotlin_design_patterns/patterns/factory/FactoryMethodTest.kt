@@ -1,6 +1,6 @@
 package com.gundamd.kotlin_design_patterns.patterns.factory
 
-import com.gundamd.kotlin_design_patterns.patterns.factory.data.*
+import com.gundamd.kotlin_design_patterns.patterns.factory.products.*
 import org.junit.jupiter.api.Test
 
 
