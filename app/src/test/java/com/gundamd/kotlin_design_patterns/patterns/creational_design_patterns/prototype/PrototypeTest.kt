@@ -1,8 +1,8 @@
-package com.gundamd.kotlin_design_patterns.patterns.prototype
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.prototype
 
-import com.gundamd.kotlin_design_patterns.patterns.prototype.products.CommonCookie
-import com.gundamd.kotlin_design_patterns.patterns.prototype.products.Cookie
-import com.gundamd.kotlin_design_patterns.patterns.prototype.products.RareCookie
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.prototype.products.CommonCookie
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.prototype.products.Cookie
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.prototype.products.RareCookie
 import org.junit.jupiter.api.Test
 import java.lang.ClassCastException
 

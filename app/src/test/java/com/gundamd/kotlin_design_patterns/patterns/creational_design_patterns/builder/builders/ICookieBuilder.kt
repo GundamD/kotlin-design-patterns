@@ -1,6 +1,6 @@
-package com.gundamd.kotlin_design_patterns.patterns.builder.builders
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.builders
 
-import com.gundamd.kotlin_design_patterns.patterns.builder.products.Cookie
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.products.Cookie
 
 interface ICookieBuilder {
     fun setName(name: String): ICookieBuilder

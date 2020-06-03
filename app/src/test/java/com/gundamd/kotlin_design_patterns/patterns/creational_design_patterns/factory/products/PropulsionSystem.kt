@@ -1,4 +1,4 @@
-package com.gundamd.kotlin_design_patterns.patterns.factory.products
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.factory.products
 
 interface PropulsionSystem {
     var engine: String

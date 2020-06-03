@@ -1,4 +1,4 @@
-package com.gundamd.kotlin_design_patterns.patterns.prototype.products
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.prototype.products
 
 abstract class Cookie {
     var name: String? = null

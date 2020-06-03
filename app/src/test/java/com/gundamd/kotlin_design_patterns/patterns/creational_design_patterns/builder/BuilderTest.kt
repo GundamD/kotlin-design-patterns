@@ -1,9 +1,9 @@
-package com.gundamd.kotlin_design_patterns.patterns.builder
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder
 
-import com.gundamd.kotlin_design_patterns.patterns.builder.builders.CommonCookieBuilder
-import com.gundamd.kotlin_design_patterns.patterns.builder.builders.CookieDirector
-import com.gundamd.kotlin_design_patterns.patterns.builder.builders.RareCookieBuilder
-import com.gundamd.kotlin_design_patterns.patterns.builder.products.Cookie
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.builders.CommonCookieBuilder
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.builders.CookieDirector
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.builders.RareCookieBuilder
+import com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.builder.products.Cookie
 import org.junit.jupiter.api.Test
 
 class BuilderTest {

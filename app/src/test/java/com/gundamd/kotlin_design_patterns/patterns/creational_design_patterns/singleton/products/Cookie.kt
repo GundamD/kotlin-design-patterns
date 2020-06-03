@@ -1,4 +1,4 @@
-package com.gundamd.kotlin_design_patterns.patterns.singleton.products
+package com.gundamd.kotlin_design_patterns.patterns.creational_design_patterns.singleton.products
 
 class Cookie {
 
